@@ -18,8 +18,9 @@ function moveToNextText() {
 
 let max_y = 190
 
-let y = 0;
+let y = 20;
 let yv = 0;
+slots.style.top = -y + 'px'
 
 function spin() {
     slot_height = slots.clientHeight
@@ -39,7 +40,6 @@ function spin() {
     if (yv > 0.2) {
         requestAnimationFrame(spin)
     } else {
-        console.log(1)
         glideToNextSlot(() => {
             nextText = 'maybe??'
             moveToNextText()
@@ -81,7 +81,6 @@ spinbutton.addEventListener('click', () => {
 
 function randomRampUpSpinAcceleration() {
     yv *= 1.02
-    console.log(1)
     if (yv < maxRampUpAcceleration) {
         requestAnimationFrame(randomRampUpSpinAcceleration)
     }

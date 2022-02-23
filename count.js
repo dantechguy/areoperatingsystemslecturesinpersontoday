@@ -1,0 +1,6 @@
+let countSpan = document.getElementById('count')
+fetch('https://oslecturecheckcount.dansworkers.workers.dev/')
+    .then(res => res.text())
+    // .then(count => console.log(count))
+    .then(count => countSpan.textContent = count)
+    .catch(console.log)
