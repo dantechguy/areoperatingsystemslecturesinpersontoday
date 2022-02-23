@@ -99,3 +99,18 @@ body {
 #by {
     margin-top: 100px;
 }
+
+#spin-emoji {
+    margin: auto;
+    display: block;
+    font-size: 80px;
+    animation: spin 4s linear infinite;
+    pointer-events: none;
+}
+
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
