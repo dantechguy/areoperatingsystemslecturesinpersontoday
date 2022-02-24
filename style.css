@@ -108,9 +108,12 @@ body {
     pointer-events: none;
 }
 
-
 @keyframes spin {
     100% {
         transform: rotate(360deg);
     }
+}
+
+#spin-emoji-container {
+    overflow: hidden;
 }
